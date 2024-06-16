@@ -1,0 +1,139 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Container for the to-do list */
+.todo-list {
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Heading style */
+.todo-list h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2d3e50;
+}
+
+/* Input and button styling */
+.todo-list input[type="text"] {
+    width: calc(100% - 70px);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.todo-list input[type="text"]:focus {
+    border-color: #5a9ef8;
+}
+
+.todo-list button {
+    padding: 12px;
+    background-color: #5a9ef8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.todo-list button:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Task list styles */
+.todo-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-list li {
+    padding: 12px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.todo-list li:hover {
+    background-color: #f8f9fc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.todo-list li.completed span {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+/* Filters and sorting styles */
+.filters {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filters label {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.filters input[type="radio"] {
+    margin-right: 5px;
+}
+
+.filters select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.filters select:focus {
+    border-color: #5a9ef8;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .todo-list input[type="text"] {
+        width: calc(100% - 60px);
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filters label {
+        margin-bottom: 5px;
+    }
+}
